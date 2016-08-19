@@ -20,7 +20,6 @@ if platform.python_implementation() == 'CPython':
         print('** WARNING: Cython not found: **', file=sys.stderr)
         traceback.print_exc()
         print('** END WARNING **', file=sys.stderr)
-        speedups.sources.append('theseus/_cytracer.c')
     else:
         speedups.sources.append('theseus/_cytracer.pyx')
     ext_modules.append(speedups)
